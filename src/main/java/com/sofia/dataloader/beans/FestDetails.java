@@ -25,7 +25,7 @@ public class FestDetails {
     @JsonProperty("nom_departement")
     private String nomDepartement;
     @JsonProperty("departement")
-    private String departement;
+    private String codeDepartement;
     @JsonProperty("periodicite")
     private String periodicite;
     @JsonProperty("mois_habituel_de_debut")
@@ -36,18 +36,14 @@ public class FestDetails {
     private String complementDomaine;
     @JsonProperty("autres_communes")
     private String autresCommunes;
-    @JsonProperty("libelle_commune_pour_calcul_cp_insee")
-    private String libelleCommunePourCalculCPInsee;
     @JsonProperty("domaine")
     private String domaine;
     @JsonProperty("date_debut_ancien")
     private String dateDebut;
-    @JsonProperty("code_insee")
-    private String codeInsee;
     @JsonProperty("commune_principale")
-    private String communePrincipale;
+    private String nomCommune;
     @JsonProperty("region")
-    private String region;
+    private String nomRegion;
     @JsonProperty("nom_de_la_manifestation")
     private String nomManifestation;
     @JsonProperty("ndeg_identification")
@@ -56,6 +52,7 @@ public class FestDetails {
     private String siteWeb;
     @JsonProperty("date_de_creation")
     private String dateCreation;
+    private String description;
 
 
 

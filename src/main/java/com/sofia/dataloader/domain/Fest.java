@@ -1,6 +1,8 @@
 package com.sofia.dataloader.domain;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -11,6 +13,8 @@ import java.util.List;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
+@Data
 public class Fest {
     @Id
     @Column(name = "fest_id")
@@ -21,16 +25,16 @@ public class Fest {
     @Column(name = "site_web")
     private String siteWeb;
     @Column(name = "mois_habituel_debut")
-    private int moisHabituelDebut;
+    private String moisHabituelDebut;
     @Column(name = "date_debut")
     private LocalDate dateDebut;
     @Column(name = "date_fin")
-    private LocalDateTime dateFin;
+    private LocalDate dateFin;
     @Column(name = "date_creation")
-    private LocalDateTime dateCreation;
+    private LocalDate dateCreation;
     private double latitude;
     private double longitude;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="commune_id")
     private Commune commune;
     private String periodicite;

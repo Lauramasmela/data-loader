@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Fest {
+public class FestBean {
 
     @JsonProperty("datasetid")
     private String dataSetId;
